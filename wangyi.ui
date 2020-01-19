@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>667</width>
+    <height>447</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton:pressed {
+    background-color: rgb(0, 0, 0);
+    border-style: inset;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>671</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::tab-bar {
+    alignment: left;
+}
+
+QTabBar::tab:hover {
+    background: #68668f;
+}
+
+QTabBar::tab:selected {
+    border-color: #3a3a3f;
+    color: #dcdde4;
+    border-bottom-color: #5c3de4;
+}
+
+QTabBar::tab {
+    background: #000ff000;
+    border: none;
+    border-bottom: 2px solid #3c3e42;
+    min-width: 10px;
+    margin-right: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #86a6e6;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="wangyitab">
+     <attribute name="title">
+      <string>网易音乐</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>661</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="songlabel">
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+border-radius:6px;
+background:transparent;
+border-bottom: 1px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:1px solid #3a3a3f;
+border-right:1px solid #3a3a3f;
+border-left:1px solid #3a3a3f;</string>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#f200f0;&quot;&gt;请输入下载的歌曲名：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="songedit">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>31</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>480</width>
+             <height>31</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;
+color: rgb(174, 0, 60);
+</string>
+           </property>
+           <property name="text">
+            <string>如：电灯胆</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QListWidget" name="songlist">
+         <property name="styleSheet">
+          <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;
+color: rgb(9, 13, 12);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pathedit">
+         <property name="styleSheet">
+          <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;
+color: rgb(174, 0, 60);</string>
+         </property>
+         <property name="text">
+          <string>点击[选择文件夹]选择歌曲保存路径：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="btnsave">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>120</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+border-radius:8px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>选择文件夹</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnstart">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>111</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+border-radius:8px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>开始下载</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnexit">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>113</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+border-radius:8px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>退出程序</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnabout">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>113</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+border-radius:8px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>关于作者</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="QQtab">
+     <attribute name="title">
+      <string>QQ音乐</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>661</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="songlabelqq">
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+border-radius:6px;
+background:transparent;
+border-bottom: 1px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:1px solid #3a3a3f;
+border-right:1px solid #3a3a3f;
+border-left:1px solid #3a3a3f;</string>
+           </property>
+           <property name="text">
+            <string>请输入下载的歌曲名：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="songeditqq">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>31</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>480</width>
+             <height>31</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QListWidget" name="songlistqq">
+         <property name="styleSheet">
+          <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="patheditqq">
+         <property name="styleSheet">
+          <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="btnsaveqq">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>111</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>保存路径</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnstartqq">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>111</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>开始下载</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnexitqq">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>113</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>退出程序</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnaboutqq">
+           <property name="minimumSize">
+            <size>
+             <width>62</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>113</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-style:none;
+padding:11px;
+border-radius:3px;
+background:transparent;
+border-bottom: 2px solid #3a3a3f;min-width: 10px;margin-right: 8px;
+padding-left:20px;padding-right:20px;padding-top:5px;padding-bottom:5px;color:#186a6e;
+border-top:2px solid #3a3a3f;
+border-right:2px solid #3a3a3f;
+border-left:2px solid #3a3a3f;
+border-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(50, 16, 104, 255), stop:1 rgba(255, 255, 255, 255));
+font: 13pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>关于作者</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

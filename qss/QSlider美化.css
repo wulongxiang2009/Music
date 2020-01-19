@@ -1,0 +1,20 @@
+/*槽*/
+#horizontalSlider::groove:horizontal {
+border: 1px solid gray;
+border-radius:2px;
+height: 4px;
+left: 12px; right: 12px;
+}
+
+/*滑条*/
+#horizontalSlider::handle:horizontal {
+border: 1px solid gray;
+border-image:url(":/image/images/b.png");
+width: 20;
+margin: -5px -5px -5px -5px;
+}
+
+/*已经划过的*/
+#horizontalSlider::sub-page:horizontal{
+background: #D1CE21;
+}
